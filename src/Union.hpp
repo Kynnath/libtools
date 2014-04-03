@@ -12,14 +12,23 @@
 
 namespace tls
 {
+    template < std::size_t i_size, std::size_t i_alignment >
+    struct Memory
+    {
+        enum
+        {
+            Size = i_size,
+            Alignment = i_alignment
+        };
+    };
+
     template < typename ... Types >
     class Union;
 
     template < typename T > // Single type case
     class Union< T >
     {
-        enum { alignment = alignof(T) };
-        char m_buffer[ sizeof(T) ];
+        char m_buffer[ sizeof(T) ]; // Size has to be ( size of largest element in union + ( size of largest element - size of largest element % largest alignment )
 
         public:
             Union ( T const& t );
@@ -30,7 +39,9 @@ namespace tls
     template < typename T, typename ... Types > // Recursive definition
     class Union< T, Types... >
         : public Union< Types... >
-    {};
+    {
+
+    };
 
     ////////////////////////////////////////////////////////////////////////////
     template < typename T >
