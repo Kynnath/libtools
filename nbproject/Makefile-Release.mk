@@ -35,8 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/src/TMP/MetaFunctions.o \
-	${OBJECTDIR}/src/Union.o
+	${OBJECTDIR}/src/TLS/Tools.o
 
 
 # C Compiler Flags
@@ -65,15 +64,10 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibtools.a: ${OBJECTFILES}
 	${AR} -rv ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibtools.a ${OBJECTFILES} 
 	$(RANLIB) ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibtools.a
 
-${OBJECTDIR}/src/TMP/MetaFunctions.o: src/TMP/MetaFunctions.cpp 
-	${MKDIR} -p ${OBJECTDIR}/src/TMP
+${OBJECTDIR}/src/TLS/Tools.o: src/TLS/Tools.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/TLS
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/TMP/MetaFunctions.o src/TMP/MetaFunctions.cpp
-
-${OBJECTDIR}/src/Union.o: src/Union.cpp 
-	${MKDIR} -p ${OBJECTDIR}/src
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Union.o src/Union.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/TLS/Tools.o src/TLS/Tools.cpp
 
 # Subprojects
 .build-subprojects:
