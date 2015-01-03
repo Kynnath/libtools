@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/src/TLS/Command.o \
 	${OBJECTDIR}/src/TLS/Tools.o
 
 
@@ -63,6 +64,11 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibtools.a: ${OBJECTFILES}
 	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibtools.a
 	${AR} -rv ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibtools.a ${OBJECTFILES} 
 	$(RANLIB) ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibtools.a
+
+${OBJECTDIR}/src/TLS/Command.o: src/TLS/Command.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/TLS
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Wall -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/TLS/Command.o src/TLS/Command.cpp
 
 ${OBJECTDIR}/src/TLS/Tools.o: src/TLS/Tools.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/TLS

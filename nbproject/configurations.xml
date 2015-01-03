@@ -4,7 +4,10 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>src/TLS/Command.hpp</itemPath>
+      <itemPath>src/TLS/Raii.hpp</itemPath>
       <itemPath>src/TLS/Tools.hpp</itemPath>
+      <itemPath>src/TLS/iterator.hpp</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -13,6 +16,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>src/TLS/Command.cpp</itemPath>
       <itemPath>src/TLS/Tools.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -44,9 +48,17 @@
         <archiverTool>
         </archiverTool>
       </compileType>
+      <item path="src/TLS/Command.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/TLS/Command.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/TLS/Raii.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="src/TLS/Tools.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/TLS/Tools.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/TLS/iterator.hpp" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="3">
@@ -75,9 +87,17 @@
         <archiverTool>
         </archiverTool>
       </compileType>
+      <item path="src/TLS/Command.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/TLS/Command.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/TLS/Raii.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="src/TLS/Tools.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/TLS/Tools.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/TLS/iterator.hpp" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>
