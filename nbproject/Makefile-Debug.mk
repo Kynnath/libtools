@@ -36,7 +36,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/src/TLS/Command.o \
-	${OBJECTDIR}/src/TLS/Tools.o
+	${OBJECTDIR}/src/TLS/Tools.o \
+	${OBJECTDIR}/src/TLS/Typedef.o
 
 
 # C Compiler Flags
@@ -74,6 +75,11 @@ ${OBJECTDIR}/src/TLS/Tools.o: src/TLS/Tools.cpp
 	${MKDIR} -p ${OBJECTDIR}/src/TLS
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -Wall -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/TLS/Tools.o src/TLS/Tools.cpp
+
+${OBJECTDIR}/src/TLS/Typedef.o: src/TLS/Typedef.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/TLS
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Wall -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/TLS/Typedef.o src/TLS/Typedef.cpp
 
 # Subprojects
 .build-subprojects:
