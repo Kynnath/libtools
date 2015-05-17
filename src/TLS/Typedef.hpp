@@ -14,7 +14,7 @@ namespace tls
   struct Typedef
   {
     Type value;
-    explicit Type(){ return value; }
+    explicit operator Type(){ return value; }
   };
 }
 
