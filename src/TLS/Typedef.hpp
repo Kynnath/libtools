@@ -8,12 +8,15 @@
 #ifndef TYPEDEF_HPP
 #define	TYPEDEF_HPP
 
-template <class Type, class Unique>
-struct Typedef
+namespace tls
 {
-  Type value;
-  explicit Type(){ return value; }
-};
+  template <class Type, class Unique>
+  struct Typedef
+  {
+    Type value;
+    explicit Type(){ return value; }
+  };
+}
 
 #endif	/* TYPEDEF_HPP */
 
